@@ -1,0 +1,13 @@
+@mixin displayFlex($align, $justify, $flexDirection) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flexDirection;
+}
+#game-container {
+  @include displayFlex("center", "space-around", "row");
+  #javascript-container,
+  #typescript-container {
+    @include displayFlex("center", "center", "column");
+  }
+}
